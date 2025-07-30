@@ -38,10 +38,6 @@ challenge1-data-science-latam-jfb/
 │   ├── tienda2.csv               # Dataset Tienda 2  
 │   ├── tienda3.csv               # Dataset Tienda 3
 │   └── tienda4.csv               # Dataset Tienda 4
-└── images/                        # Visualizaciones generadas
-    ├── ingresos_comparativa.png
-    ├── ventas_categoria.png
-    └── costos_envio.png
 ```
 
 ## 🚀 Instalación y Ejecución
