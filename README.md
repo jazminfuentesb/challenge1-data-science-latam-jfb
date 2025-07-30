@@ -78,37 +78,46 @@ challenge1-data-science-latam-jfb/
 
 ### Pipeline de Análisis Implementado
 
-```python
-# 1. Carga y Exploración de Datos
-def load_and_explore_data():
-    # Carga de datasets por tienda
-    # Exploración inicial: shape, info(), describe()
-    
-# 2. Análisis de Facturación
-def analyze_revenue():
-    # Cálculo de ingresos totales por tienda
-    # Identificación de outliers financieros
-    
-# 3. Análisis Categórico
-def analyze_categories():
-    # Distribución de ventas por categoría
-    # Análisis comparativo entre tiendas
-    
-# 4. Análisis de Satisfacción
-def analyze_customer_satisfaction():
-    # Métricas de calificación promedio
-    # Análisis de distribución de ratings
-    
-# 5. Análisis de Productos
-def analyze_products():
-    # Ranking de productos más/menos vendidos
-    # Análisis de rendimiento por producto
-    
-# 6. Análisis de Costos Operativos
-def analyze_operational_costs():
-    # Evaluación de eficiencia logística
-    # Comparativa de costos de envío
-```
+📊 Metodología de Análisis
+Pipeline de Análisis Implementado
+
+El proyecto sigue una metodología estructurada dividida en 6 etapas de análisis secuencial:
+
+1. 📈 Análisis de Facturación
+
+Objetivo: Determinar el rendimiento financiero por tienda
+Métricas clave: Ingresos totales, comparativa entre tiendas
+Resultado: Identificación de la tienda con menor facturación
+
+2. 📦 Ventas por Categoría
+
+Objetivo: Evaluar el comportamiento de ventas por categoría de productos
+Métricas clave: Volumen de productos vendidos por categoría y tienda
+Resultado: Identificación de categorías más y menos exitosas por tienda
+
+3. ⭐ Calificación Promedio de la Tienda
+
+Objetivo: Medir la satisfacción del cliente por tienda
+Métricas clave: Rating promedio, comparativa de experiencia del cliente
+Resultado: Evaluación de la calidad del servicio por tienda
+
+4. 🏆 Productos Más y Menos Vendidos
+
+Objetivo: Identificar el rendimiento de productos específicos
+Métricas clave: Ranking de productos, análisis de demanda por tienda
+Resultado: Catálogo de productos estrella y productos con menor rotación
+
+5. 🚚 Envío Promedio por Tienda
+
+Objetivo: Evaluar la eficiencia operativa y logística
+Métricas clave: Costos de envío promedio, eficiencia operativa
+Resultado: Identificación de ventajas competitivas en costos operativos
+
+6. 📋 Informe Final: Recomendación de Tienda
+
+Objetivo: Síntesis integral de todos los análisis realizados
+Metodología: Análisis ponderado de factores múltiples
+Resultado: Recomendación fundamentada para la decisión de venta
 
 ### Técnicas de Data Science Aplicadas
 
@@ -118,71 +127,51 @@ def analyze_operational_costs():
 - **Visualización de Datos Multidimensional**
 - **Análisis Comparativo de KPIs**
 
-## 📈 Resultados Clave y KPIs
-
-### Métricas Principales Evaluadas
-
-| KPI | Descripción | Método de Cálculo |
-|-----|-------------|-------------------|
-| **Revenue Total** | Ingresos por tienda | `df['Precio'].sum()` |
-| **Avg. Customer Rating** | Satisfacción promedio | `df['Calificación'].mean()` |
-| **Shipping Cost Efficiency** | Costo logístico promedio | `df['Costo de envío'].mean()` |
-| **Product Performance** | Ranking de productos | `df['Producto'].value_counts()` |
-| **Category Distribution** | Distribución por categoría | `df.groupby('Categoría').size()` |
+## 📈 Resultados Clave 
 
 ### Hallazgos Técnicos
 
 ```python
-# Resultado del análisis financiero
-revenue_results = {
-    'Tienda 1': 1150880400.00,  # Líder en facturación
-    'Tienda 2': 1116343500.00,  # 2º lugar (-3.0%)
-    'Tienda 3': 1098019600.00,  # 3º lugar (-4.6%)
-    'Tienda 4': 1038375700.00   # Menor rendimiento (-9.8%)
-}
+# Resultados del análisis financiero más significativos
 
-# Eficiencia operativa detectada
-shipping_efficiency = {
-    'Tienda 4': 23459.46,  # Más eficiente
-    'Tienda 3': 24805.68,  # 2º lugar
-    'Tienda 2': 25216.24,  # 3º lugar  
-    'Tienda 1': 26018.61   # Menos eficiente
-}
-```
+Ingreso total por tienda:
+Tienda 1: $1,150,880,400.00
+Tienda 2: $1,116,343,500.00
+Tienda 3: $1,098,019,600.00
+Tienda 4: $1,038,375,700.00
 
-## 🔍 Análisis Técnico de la Decisión
+La tienda que más vende es: Tienda 1 con un ingreso total de $1,150,880,400.00
 
-### Algoritmo de Recomendación Implementado
+La tienda que menos vende es: Tienda 4 con un ingreso total de $1,038,375,700.00
 
-```python
-def business_recommendation_algorithm(revenue_data, satisfaction_data, 
-                                    cost_data, weights={'revenue': 0.7, 
-                                                       'satisfaction': 0.2, 
-                                                       'efficiency': 0.1}):
-    """
-    Algoritmo ponderado para recomendación de tienda a vender
-    Prioriza métricas financieras sobre operativas
-    """
-    scores = {}
-    for store in revenue_data.keys():
-        weighted_score = (
-            revenue_data[store] * weights['revenue'] +
-            satisfaction_data[store] * weights['satisfaction'] +
-            (1/cost_data[store]) * weights['efficiency']  # Inversión para costos
-        )
-        scores[store] = weighted_score
-    
-    return min(scores, key=scores.get)  # Tienda con menor score ponderado
+---------------------------------------------------------------------------------
+
+Costo de envío promedio por tienda:
+Tienda 1: 26018.61
+Tienda 2: 25216.24
+Tienda 3: 24805.68
+Tienda 4: 23459.46
+
+La tienda con el menor costo de envío es la Tienda 1 con un promedio de 26018.61
+
+La tienda con el menor costo de envío es la Tienda 4 con un promedio de 23459.46
+
 ```
 
 ### Conclusión Técnica
 
 **Output del Análisis:** `Tienda 4` identificada como candidata óptima para venta.
 
-**Justificación Algorítmica:**
-- **Revenue Gap:** -9.8% vs líder (factor determinante)
-- **Operational Efficiency:** +10.9% vs promedio (no compensa gap financiero)
-- **Customer Satisfaction:** 4.00/5 (dentro del rango aceptable)
+
+ **Justificación para Vender la Tienda 4**:
+ 
+1. **Menor Ingreso Total**: La Tienda 4 registró consistentemente el menor ingreso total de las cuatro tiendas. Este es el indicador más directo de su baja rentabilidad y menor generación de valor.
+
+2. **Menor Volumen de Ventas General**: Más allá del ingreso, la Tienda 4 también mostró, en general, un menor volumen de productos vendidos a través de las categorías en comparación con las otras tiendas, lo que indica una actividad comercial más débil.
+
+3. **A pesar del Costo de Envío Bajo**: Aunque la Tienda 4 tuvo el costo de envío promedio más bajo, esta ventaja en la reducción de gastos no es suficiente para compensar su bajo desempeño en ventas y facturación. Un costo de envío eficiente pierde relevancia si el volumen de negocio que lo acompaña es mínimo.
+
+4. **Calificación de Cliente**: Si bien su calificación promedio es intermedia, no es lo suficientemente alta como para compensar su debilidad en ingresos y volumen.
 
 ## 🛠️ Posibles Mejoras y Extensiones
 
@@ -193,27 +182,39 @@ def business_recommendation_algorithm(revenue_data, satisfaction_data,
 - **Análisis de Correlación:** Relación entre variables
 - **A/B Testing:** Comparación estadística entre tiendas
 
-### Optimizaciones Técnicas
-```python
-# Implementaciones futuras sugeridas
-def advanced_analytics():
-    # Time series analysis
-    # Customer segmentation (K-means)
-    # Revenue forecasting (ARIMA/Prophet)
-    # Statistical significance testing
-```
 
 ## 🚨 Limitaciones y Consideraciones
 
-### Limitaciones del Dataset
-- **Datos transversales:** Sin componente temporal
-- **Variables limitadas:** Ausencia de costos operativos detallados
-- **Métricas faltantes:** ROI, margen de ganancia, costos fijos
+### Variables Disponibles en el Dataset
+El dataset contiene **13 columnas** con información detallada:
+- **Producto, Categoría del Producto, Precio** (métricas de producto)
+- **Costo de envío, Fecha de Compra** (métricas operativas)
+- **Vendedor, Lugar de Compra** (información geográfica)
+- **Calificación** (satisfacción del cliente)
+- **Método de pago, Cantidad de cuotas** (información financiera)
+- **lat, lon** (coordenadas geográficas)
+- **Tienda** (identificador de tienda)
+
+### Limitaciones del Análisis Actual
+- **Análisis temporal limitado:** No se exploró la evolución temporal de ventas por fechas
+- **Información geográfica no utilizada:** Coordenadas lat/lon disponibles pero no analizadas
+- **Segmentación de vendedores:** No se analizó el rendimiento por vendedor individual
+- **Análisis de métodos de pago:** Patrones de pago no explorados
+- **Métricas financieras faltantes:** ROI, margen de ganancia neta, costos operativos totales
+
+### Oportunidades de Análisis Futuro
+- **Análisis geoespacial:** Utilizar coordenadas para mapeo de ventas
+- **Análisis temporal:** Tendencias estacionales y patrones de crecimiento
+- **Segmentación de clientes:** Análisis por método de pago y ubicación
+- **Performance de vendedores:** Evaluación individual de equipo de ventas
+- **Análisis de cuotas:** Impacto del financiamiento en las ventas
 
 ### Supuestos del Análisis
-- Datos representativos del período analizado
-- Homogeneidad en estructura de costos entre tiendas
-- Estabilidad de patrones de consumo
+- Datos representativos del período 2020-2023 (basado en fechas observadas)
+- Homogeneidad en estructura de costos operativos entre tiendas
+- Calificaciones reflejan satisfacción real del cliente
+- Precios incluyen todos los costos para el cliente final
+
 
 ## 👨‍💻 Información del Desarrollador
 
