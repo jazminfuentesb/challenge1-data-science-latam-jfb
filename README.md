@@ -10,7 +10,7 @@ Proyecto de **Data Science** desarrollado como parte del Challenge Alura Latam, 
 
 ### Entorno de Desarrollo
 - **Python 3.8+**
-- **Jupyter Notebook** / **Google Colab**
+- **Google Colab**
 
 ### Librerías Principales
 ```python
