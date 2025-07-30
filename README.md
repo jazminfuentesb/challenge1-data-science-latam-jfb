@@ -135,6 +135,7 @@ Resultado: Recomendación fundamentada para la decisión de venta
 # Resultados del análisis financiero más significativos
 
 Ingreso total por tienda:
+
 Tienda 1: $1,150,880,400.00
 Tienda 2: $1,116,343,500.00
 Tienda 3: $1,098,019,600.00
