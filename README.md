@@ -33,7 +33,7 @@ challenge1-data-science-latam-jfb/
 │
 ├── AluraStoreLatam.ipynb           # Notebook principal con análisis completo
 ├── README.md                       # Documentación técnica del proyecto
-├── data/                          # Datos del proyecto (si aplicable)
+├── base-de-datos-challenge1-latam/ # Datos del proyecto (si aplicable)
 │   ├── tienda1.csv               # Dataset Tienda 1
 │   ├── tienda2.csv               # Dataset Tienda 2  
 │   ├── tienda3.csv               # Dataset Tienda 3
