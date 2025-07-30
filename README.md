@@ -221,8 +221,8 @@ El dataset contiene **13 columnas** con información detallada:
 
 **Jazmín Fuentes**
 - **GitHub:** [@jazminfuentesb](https://github.com/jazminfuentesb)
-- **LinkedIn:** [https://www.linkedin.com/in/jazmin-fuentes/]
-- **Email:** [jazminfuentes.1213@gmail.com]
+- **LinkedIn:** https://www.linkedin.com/in/jazmin-fuentes/
+- **Email:** jazminfuentes.1213@gmail.com
 
 ### Competencias Técnicas Demostradas
 - **Python Programming:** Pandas, NumPy, Matplotlib
